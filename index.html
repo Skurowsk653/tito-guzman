@@ -4,65 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lanzamientos Musicales Premium</title>
-        <style>
-        body { 
-            background-image: url('fondo.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed; 
-            color: #c5c6c7; 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            text-align: center; 
-            padding: 20px; 
-            margin: 0; 
-        }
-        .contenedor { 
-            max-width: 500px; 
-            margin: 40px auto; 
-            background-color: #1f2833; 
-            padding: 30px; 
-            border-radius: 15px; 
-            border: 1px solid #45f3ff; 
-            box-shadow: 0 0 20px rgba(69, 243, 255, 0.2); 
-        }
-        h1 { color: #fff; font-size: 24px; margin-bottom: 10px; }
-        p { color: #66fcf1; font-size: 16px; line-height: 1.5; }
-        .boton { 
-            display: inline-block; 
-            background-color: #66fcf1; 
-            color: #0b0c10; 
-            padding: 12px 30px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            border-radius: 25px; 
-            margin-top: 20px; 
-        }
-        .anuncio-espacio { 
-            margin-top: 30px; 
-            padding: 15px; 
-            background: #0b0c10; 
-            border-radius: 8px; 
-            color: #45ea55; 
-            font-size: 12px; 
-        }
-    </style>
 
-        .boton { display: inline-block; background-color: #66fcf1; color: #0b0c10; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 25px; margin-top: 20px; transition: 0.3s; }
-        .anuncio-espacio { margin-top: 30px; padding: 15px; background: #0b0c10; border-radius: 8px; color: #45ea55; font-size: 12px; }
+    <style>
+        body {
+            background-image: url('fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #c5c6c7;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .contenedor {
+            max-width: 500px;
+            margin: 40px auto;
+            background-color: #1f2833;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #45f3ff;
+            box-shadow: 0 0 20px rgba(69, 243, 255, 0.2);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #66fcf1;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #66fcf1;
+            color: #0b0c10;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #45f3ff;
+            transform: scale(1.05);
+        }
+
+        .anuncio-espacio {
+            margin-top: 30px;
+            padding: 15px;
+            background: #0b0c10;
+            border-radius: 8px;
+            color: #45ea55;
+            font-size: 12px;
+        }
     </style>
 </head>
-<body>
-    <div class="contenedor">
-        <h1>🎵 ¡Lo muevo de TIto Guzman y su conjunto!</h1>
-        <p>Estás a un paso de escuchar el nuevo tema promocional antes de su lanzamiento en Spotify.</p>
-        
-        <!-- Botón de acceso limpio (TinyURL) -->
-        <a href="TU_LINK_DE_TINYURL_AQUI" class="boton">Escuchar Ahora</a>
 
-        <!-- Zona para colocar los anuncios de Adsterra más adelante -->
+<body>
+
+    <div class="contenedor">
+
+        <h1>🎵 ¡Lo muevo de Tito Guzmán y su conjunto!</h1>
+
+        <p>
+            Estás a un paso de escuchar el nuevo tema promocional
+            antes de su lanzamiento en Spotify.
+        </p>
+
+        <a href="TU_LINK_DE_TINYURL_AQUI"
+           class="boton"
+           target="_blank"
+           rel="noopener noreferrer">
+            Escuchar Ahora
+        </a>
+
         <div class="anuncio-espacio">
-            <p style="color:#555;">[Espacio Publicitario / Anuncio Recomendado]</p>
+            <p style="color:#555;">
+                [Espacio Publicitario / Anuncio Recomendado]
+            </p>
         </div>
+
     </div>
+
 </body>
 </html>
