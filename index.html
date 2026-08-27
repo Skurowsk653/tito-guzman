@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tito Guzman y su conjunto</title>
+    <title>Tito Guzman y su conjunto - Próximo Evento</title>
     <style>
-        /* Contenedor especial para la imagen de fondo */
         .fondo-pantalla {
             position: fixed;
             top: 0;
@@ -13,11 +12,11 @@
             width: 100vw;
             height: 100vh;
             background-image: url('fondo.jpg');
-            background-size: contain; /* Forzar a que la imagen se vea siempre completa */
+            background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
-            background-color: #0b0c10; /* Relleno negro a los lados si la pantalla sobra */
-            z-index: -1; /* Lo manda por detrás de todo */
+            background-color: #0b0c10;
+            z-index: -1;
         }
 
         body { 
@@ -28,49 +27,52 @@
             margin: 0; 
             display: flex;
             flex-direction: column;
-            justify-content: flex-end; /* Empuja la tarjeta hacia abajo en celulares */
+            justify-content: flex-end;
             min-height: 95vh;
         }
 
         .contenedor { 
             max-width: 400px; 
             margin: 40px auto 20px auto; 
-            background-color: rgba(11, 12, 16, 0.75); /* Fondo oscuro translúcido */
+            background-color: rgba(11, 12, 16, 0.85); /* Un poco más oscuro para que los abuelos lean mejor el texto */
             backdrop-filter: blur(8px); 
             -webkit-backdrop-filter: blur(8px); 
             padding: 25px; 
             border-radius: 15px; 
-            border: 1px solid rgba(69, 243, 255, 0.25); 
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(69, 243, 255, 0.35); 
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
         }
 
-        h1 { color: #fff; font-size: 20px; margin-bottom: 10px; }
-        p { color: #66fcf1; font-size: 14px; line-height: 1.5; }
-        
-        .boton { 
-            display: inline-block; 
-            background-color: rgba(102, 253, 241, 0.15); 
-            color: #66fcf1; 
-            border: 2px solid rgba(102, 253, 241, 0.6); 
-            padding: 8px 20px; 
+        h1 { color: #fff; font-size: 22px; margin-bottom: 5px; }
+        .subtitulo { color: #ffbd59; font-size: 16px; font-weight: bold; margin-top: 0; }
+        p { color: #ffffff; font-size: 15px; line-height: 1.6; }
+        .info-destacada { color: #66fcf1; font-weight: bold; font-size: 16px; }
+
+        /* Botón de Ubicación Gigante para Personas Mayores */
+        .boton-mapa { 
+            display: block; 
+            background-color: #ff4a4a; /* Rojo llamativo para que se note al instante */
+            color: #ffffff; 
+            border: none;
+            padding: 15px 25px; 
             text-decoration: none; 
             font-weight: bold; 
-            font-size: 14px;
-            border-radius: 20px; 
-            margin-top: 15px; 
+            font-size: 18px; /* Letras grandes para facilitar la lectura */
+            border-radius: 30px; 
+            margin: 20px auto 10px auto; 
+            box-shadow: 0 4px 15px rgba(255, 74, 74, 0.4);
             transition: 0.3s;
         }
 
-        .boton:hover {
-            background-color: #66fcf1; 
-            color: #0b0c10;
-            box-shadow: 0 0 15px rgba(102, 253, 241, 0.5);
+        .boton-mapa:hover {
+            background-color: #ff1f1f;
+            transform: scale(1.03);
         }
 
         .anuncio-espacio { 
-            margin-top: 25px; 
-            padding: 12px; 
-            background: rgba(11, 12, 16, 0.85); 
+            margin-top: 20px; 
+            padding: 10px; 
+            background: rgba(11, 12, 16, 0.95); 
             border-radius: 8px; 
             color: #45ea55; 
             font-size: 11px; 
@@ -79,19 +81,26 @@
 </head>
 <body>
 
-    <!-- Capa que controla la imagen adaptativa -->
     <div class="fondo-pantalla"></div>
 
     <div class="contenedor">
-        <h1>🎵 ¡Lo nuevo de Tito Guzmán y su conjunto!</h1>
-        <p>Estás a un paso de escuchar el nuevo tema promocional antes de su lanzamiento en Spotify.</p>
+        <h1>🎵 ¡Gran Baile Familiar!</h1>
+        <p class="subtitulo">Presentación en Vivo de Tito Guzmán y su conjunto</p>
         
-        <!-- Recuerda cambiar esto por tu link real de destino -->
-        <a href="TU_LINK_DE_SPOTIFY_O_YOUTUBE" class="boton">Escuchar Ahora</a>
+        <p>Los esperamos para disfrutar de un gran día en familia con varios conjuntos musicales y la mejor gastronomía criolla: <span class="info-destacada">¡Cortes de parrilla y asado caliente!</span> 🔥🍖</p>
+        
+        <p>📍 <b>Lugar:</b> Patio de Cachito y Ñeca<br>
+        🏢 <b>Dirección:</b> Azopardo 463, El Talar, Pacheco, Prov. de Buenos Aires<br>
+        ⏰ <b>Horario de Apertura:</b> 10:00 hs</p>
+        
+        <!-- BOTÓN DIRECTO A GOOGLE MAPS CON LA DIRECCIÓN EXACTA CARGADA -->
+        <a href="https://google.com" target="_blank" class="boton-mapa">
+            📍 TOCÁ ACÁ PARA VER CÓMO LLEGAR
+        </a>
 
-        <!-- Zona para colocar los anuncios de Adsterra -->
         <div class="anuncio-espacio">
-            <p style="color:#555;">[Espacio Publicitario / Anuncio Recomendado]</p>
+            <!-- Espacio listo para colocar tu código de Adsterra -->
+            <p style="color:#555;">Anuncio Recomendado</p>
         </div>
     </div>
 
