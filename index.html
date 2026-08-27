@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tito Guzman y su conjunto - Próximo Evento</title>
+    <title>Tito Guzman y su conjunto - Próxima Actuación</title>
     <style>
         .fondo-pantalla {
             position: fixed;
@@ -35,7 +34,7 @@
         .contenedor { 
             max-width: 400px; 
             margin: 40px auto 20px auto; 
-            background-color: rgba(11, 12, 16, 0.85); /* Un poco más oscuro para que los abuelos lean mejor el texto */
+            background-color: rgba(11, 12, 16, 0.88); 
             backdrop-filter: blur(8px); 
             -webkit-backdrop-filter: blur(8px); 
             padding: 25px; 
@@ -45,29 +44,41 @@
         }
 
         h1 { color: #fff; font-size: 22px; margin-bottom: 5px; }
-        .subtitulo { color: #ffbd59; font-size: 16px; font-weight: bold; margin-top: 0; }
+        .subtitulo { color: #ffbd59; font-size: 16px; font-weight: bold; margin-top: 0; margin-bottom: 15px; }
+        
+        .fecha-evento {
+            background-color: #ffbd59;
+            color: #0b0c10;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 8px;
+            border-radius: 8px;
+            margin: 10px 0 20px 0;
+            display: inline-block;
+            width: 90%;
+        }
+
         p { color: #ffffff; font-size: 15px; line-height: 1.6; }
         .info-destacada { color: #66fcf1; font-weight: bold; font-size: 16px; }
 
-        /* Botón de Ubicación Gigante para Personas Mayores */
         .boton-mapa { 
             display: block; 
-            background-color: #ff4a4a; /* Rojo llamativo para que se note al instante */
+            background-color: #ff4a4a; 
             color: #ffffff; 
             border: none;
             padding: 15px 25px; 
             text-decoration: none; 
             font-weight: bold; 
-            font-size: 18px; /* Letras grandes para facilitar la lectura */
+            font-size: 17px; 
             border-radius: 30px; 
-            margin: 20px auto 10px auto; 
+            margin: 25px auto 10px auto; 
             box-shadow: 0 4px 15px rgba(255, 74, 74, 0.4);
             transition: 0.3s;
         }
 
         .boton-mapa:hover {
             background-color: #ff1f1f;
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
 
         .anuncio-espacio { 
@@ -88,19 +99,21 @@
         <h1>🎵 ¡Gran Baile Familiar!</h1>
         <p class="subtitulo">Presentación en Vivo de Tito Guzmán y su conjunto</p>
         
-        <p>Los esperamos para disfrutar de un gran día en familia con varios conjuntos musicales y la mejor gastronomía criolla: <span class="info-destacada">¡Con los mejores cortes de parrilla!</span> 🔥🍖</p>
+        <!-- === CAMBIA ESTE TEXTO CON LA FECHA REAL DEL BAILAR === -->
+        <div class="fecha-evento">📅 DOMINGO 6 DE SEPTIEMBRE</div>
+        
+        <p>Los esperamos para disfrutar un hermoso día en familia con varios conjuntos musicales en vivo: <span class="info-destacada">¡Los mejores Cortes de parrilla!</span> 🔥🍖</p>
         
         <p>📍 <b>Lugar:</b> Patio de Chachito y Ñeca<br>
-        🏢 <b>Dirección:</b> Azopardo 463, El Talar, Pacheco, Prov. de Buenos Aires<br>
-        ⏰ <b>Horario de Apertura:</b> 10:00 hs</p>
+        🏢 <b>Dirección:</b> Juan Bautista Azopardo 463, Troncos del Talar, Buenos Aires<br>
+        ⏰ <b>Apertura de Puertas:</b> 10:00 hs</p>
         
-        <!-- BOTÓN DIRECTO A GOOGLE MAPS CON LA DIRECCIÓN EXACTA CARGADA -->
-        <a href="https://google.com" target="_blank" class="boton-mapa">
+        <!-- ENLACE DE NAVEGACIÓN DIRECTA FORZADA POR GPS -->
+        <a href="https://google.com" target="_self" class="boton-mapa">
             📍 TOCÁ ACÁ PARA VER CÓMO LLEGAR
         </a>
 
         <div class="anuncio-espacio">
-            <!-- Espacio listo para colocar tu código de Adsterra -->
             <p style="color:#555;">Anuncio Recomendado</p>
         </div>
     </div>
