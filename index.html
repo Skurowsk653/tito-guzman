@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tito Guzman y su conjunto</title>
     <style>
+        /* Contenedor especial para la imagen de fondo */
+        .fondo-pantalla {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('fondo.jpg');
+            background-size: contain; /* Forzar a que la imagen se vea siempre completa */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-color: #0b0c10; /* Relleno negro a los lados si la pantalla sobra */
+            z-index: -1; /* Lo manda por detrás de todo */
+        }
+
         body { 
-            background-image: url('fondo.jpg'); 
-            background-size: cover; /* Cambiado a cover para que llene toda la pantalla del celular sin bordes vacíos */
-            background-position: center center; /* Centra el fondo vertical y horizontalmente */
-            background-repeat: no-repeat; 
-            background-attachment: fixed; 
             color: #c5c6c7; 
             font-family: 'Segoe UI', Arial, sans-serif; 
             text-align: center; 
@@ -18,25 +28,28 @@
             margin: 0; 
             display: flex;
             flex-direction: column;
-            justify-content: flex-end; /* Empuja la tarjeta hacia abajo para no tapar los rostros en el fondo */
-            min-height: 92vh;
+            justify-content: flex-end; /* Empuja la tarjeta hacia abajo en celulares */
+            min-height: 95vh;
         }
+
         .contenedor { 
-            max-width: 420px; 
-            margin: 0 auto 20px auto; /* Centrado horizontal y margen abajo */
-            background-color: rgba(11, 12, 16, 0.65); /* Fondo oscuro con 65% de transparencia (más translúcido) */
-            backdrop-filter: blur(8px); /* Aumentado el efecto de vidrio esmerilado */
-            -webkit-backdrop-filter: blur(8px); /* Compatibilidad con iPhone */
+            max-width: 400px; 
+            margin: 40px auto 20px auto; 
+            background-color: rgba(11, 12, 16, 0.75); /* Fondo oscuro translúcido */
+            backdrop-filter: blur(8px); 
+            -webkit-backdrop-filter: blur(8px); 
             padding: 25px; 
             border-radius: 15px; 
-            border: 1px solid rgba(69, 243, 255, 0.25); /* Borde sutil */
+            border: 1px solid rgba(69, 243, 255, 0.25); 
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
         }
+
         h1 { color: #fff; font-size: 20px; margin-bottom: 10px; }
         p { color: #66fcf1; font-size: 14px; line-height: 1.5; }
+        
         .boton { 
             display: inline-block; 
-            background-color: rgba(102, 253, 241, 0.15); /* Botón elegante y transparente */
+            background-color: rgba(102, 253, 241, 0.15); 
             color: #66fcf1; 
             border: 2px solid rgba(102, 253, 241, 0.6); 
             padding: 8px 20px; 
@@ -47,11 +60,13 @@
             margin-top: 15px; 
             transition: 0.3s;
         }
+
         .boton:hover {
             background-color: #66fcf1; 
             color: #0b0c10;
             box-shadow: 0 0 15px rgba(102, 253, 241, 0.5);
         }
+
         .anuncio-espacio { 
             margin-top: 25px; 
             padding: 12px; 
@@ -63,11 +78,15 @@
     </style>
 </head>
 <body>
+
+    <!-- Capa que controla la imagen adaptativa -->
+    <div class="fondo-pantalla"></div>
+
     <div class="contenedor">
         <h1>🎵 ¡Lo nuevo de Tito Guzmán y su conjunto!</h1>
         <p>Estás a un paso de escuchar el nuevo tema promocional antes de su lanzamiento en Spotify.</p>
         
-        <!-- Tu link real de destino va en las comillas del href -->
+        <!-- Recuerda cambiar esto por tu link real de destino -->
         <a href="TU_LINK_DE_SPOTIFY_O_YOUTUBE" class="boton">Escuchar Ahora</a>
 
         <!-- Zona para colocar los anuncios de Adsterra -->
@@ -75,5 +94,6 @@
             <p style="color:#555;">[Espacio Publicitario / Anuncio Recomendado]</p>
         </div>
     </div>
+
 </body>
 </html>
