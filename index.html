@@ -34,7 +34,7 @@
         .contenedor { 
             max-width: 400px; 
             margin: 40px auto 20px auto; 
-            background-color: rgba(11, 12, 16, 0.88); 
+            background-color: rgba(11, 12, 16, 0.90); /* Más oscuro para facilitar la lectura */
             backdrop-filter: blur(8px); 
             -webkit-backdrop-filter: blur(8px); 
             padding: 25px; 
@@ -61,6 +61,7 @@
         p { color: #ffffff; font-size: 15px; line-height: 1.6; }
         .info-destacada { color: #66fcf1; font-weight: bold; font-size: 16px; }
 
+        /* Botón de Ubicación Gigante de Alta Compatibilidad */
         .boton-mapa { 
             display: block; 
             background-color: #ff4a4a; 
@@ -73,6 +74,7 @@
             border-radius: 30px; 
             margin: 25px auto 10px auto; 
             box-shadow: 0 4px 15px rgba(255, 74, 74, 0.4);
+            cursor: pointer;
             transition: 0.3s;
         }
 
@@ -99,24 +101,46 @@
         <h1>🎵 ¡Gran Baile Familiar!</h1>
         <p class="subtitulo">Presentación en Vivo de Tito Guzmán y su conjunto</p>
         
-        <!-- === CAMBIA ESTE TEXTO CON LA FECHA REAL DEL BAILAR === -->
+        <!-- Fecha Destacada -->
         <div class="fecha-evento">📅 DOMINGO 6 DE SEPTIEMBRE</div>
         
-        <p>Los esperamos para disfrutar un hermoso día en familia con varios conjuntos musicales en vivo: <span class="info-destacada">¡Los mejores Cortes de parrilla!</span> 🔥🍖</p>
+        <p>Los esperamos para disfrutar un hermoso día con varios conjuntos musicales en vivo: <span class="info-destacada">¡Los mejores cortes de parrilla!</span> 🔥🍖</p>
         
         <p>📍 <b>Lugar:</b> Patio de Chachito y Ñeca<br>
         🏢 <b>Dirección:</b> Juan Bautista Azopardo 463, Troncos del Talar, Buenos Aires<br>
         ⏰ <b>Apertura de Puertas:</b> 10:00 hs</p>
         
-        <!-- ENLACE DE NAVEGACIÓN DIRECTA FORZADA POR GPS -->
-        <a href="https://google.com" target="_self" class="boton-mapa">
+        <!-- BOTÓN INTELIGENTE CON ACTIVADOR JAVASCRIPT -->
+        <button onclick="abrirMapa()" class="boton-mapa">
             📍 TOCÁ ACÁ PARA VER CÓMO LLEGAR
-        </a>
+        </button>
 
         <div class="anuncio-espacio">
             <p style="color:#555;">Anuncio Recomendado</p>
         </div>
     </div>
+
+    <!-- CÓDIGO INTELIGENTE: Detecta el celular del usuario y fuerza la App nativa de mapas -->
+    <script>
+        function abrirMapa() {
+            var latitud = -34.453392;
+            var longitud = -58.599187;
+            var usuarioAgente = navigator.userAgent.toLowerCase();
+
+            if (usuarioAgente.indexOf("iphone") > -1 || usuarioAgente.indexOf("ipad") > -1) {
+                // Si el abuelo o visitante usa iPhone, fuerza la App de Mapas de Apple o Google Maps de iOS
+                window.location.href = "maps://://google.com" + latitud + "," + longitud;
+            } else {
+                // Si usa Android, lanza el comando "geo:" que arranca la App nativa de Google Maps al instante
+                window.location.href = "geo:" + latitud + "," + longitud + "?q=" + latitud + "," + longitud + "(Patio+de+Chachito+y+Neca)";
+                
+                // Respaldo en caso de que el navegador bloquee el comando geo
+                setTimeout(function() {
+                    window.location.href = "https://www.google.com/maps/dir/?api=1&destination=" + latitud + "," + longitud;
+                }, 500);
+            }
+        }
+    </script>
 
 </body>
 </html>
