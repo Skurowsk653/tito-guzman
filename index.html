@@ -1,34 +1,45 @@
-               <style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tito Guzman y su conjunto</title>
+    <style>
         body { 
             background-image: url('fondo.jpg'); 
-            background-size: contain; /* Ajusta la imagen completa para que no se corte */
-            background-position: center top; /* Centra la imagen arriba */
-            background-repeat: no-repeat; /* Evita que la foto se duplique */
-            background-color: #0b0c10; /* Color de relleno negro por si la pantalla es más grande que la foto */
+            background-size: cover; /* Cambiado a cover para que llene toda la pantalla del celular sin bordes vacíos */
+            background-position: center center; /* Centra el fondo vertical y horizontalmente */
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
             color: #c5c6c7; 
             font-family: 'Segoe UI', Arial, sans-serif; 
             text-align: center; 
-            padding: 25px 10px; 
+            padding: 20px 10px; 
             margin: 0; 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Empuja la tarjeta hacia abajo para no tapar los rostros en el fondo */
+            min-height: 92vh;
         }
         .contenedor { 
-            max-width: 420px; /* Tarjeta un poco más compacta */
-            margin: 30px auto; 
-            background-color: rgba(31, 40, 51, 0.75); /* Fondo oscuro con 75% de transparencia */
-            backdrop-filter: blur(5px); /* Efecto de vidrio esmerilado muy estético */
+            max-width: 420px; 
+            margin: 0 auto 20px auto; /* Centrado horizontal y margen abajo */
+            background-color: rgba(11, 12, 16, 0.65); /* Fondo oscuro con 65% de transparencia (más translúcido) */
+            backdrop-filter: blur(8px); /* Aumentado el efecto de vidrio esmerilado */
+            -webkit-backdrop-filter: blur(8px); /* Compatibilidad con iPhone */
             padding: 25px; 
             border-radius: 15px; 
-            border: 1px solid rgba(69, 243, 255, 0.4); 
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(69, 243, 255, 0.25); /* Borde sutil */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
         }
         h1 { color: #fff; font-size: 20px; margin-bottom: 10px; }
         p { color: #66fcf1; font-size: 14px; line-height: 1.5; }
         .boton { 
             display: inline-block; 
-            background-color: rgba(102, 253, 241, 0.2); /* Botón con fondo transparente (20% de color) */
-            color: #66fcf1; /* Letras de color brillante para que se lea bien */
-            border: 2px solid #66fcf1; /* Borde sólido que define el botón */
-            padding: 8px 20px; /* Tamaño más pequeño y estilizado */
+            background-color: rgba(102, 253, 241, 0.15); /* Botón elegante y transparente */
+            color: #66fcf1; 
+            border: 2px solid rgba(102, 253, 241, 0.6); 
+            padding: 8px 20px; 
             text-decoration: none; 
             font-weight: bold; 
             font-size: 14px;
@@ -37,15 +48,32 @@
             transition: 0.3s;
         }
         .boton:hover {
-            background-color: #66fcf1; /* Al pasar el dedo o el mouse, el botón se ilumina por completo */
+            background-color: #66fcf1; 
             color: #0b0c10;
+            box-shadow: 0 0 15px rgba(102, 253, 241, 0.5);
         }
         .anuncio-espacio { 
             margin-top: 25px; 
             padding: 12px; 
-            background: rgba(11, 12, 16, 0.8); 
+            background: rgba(11, 12, 16, 0.85); 
             border-radius: 8px; 
             color: #45ea55; 
             font-size: 11px; 
         }
     </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>🎵 ¡Lo nuevo de Tito Guzmán y su conjunto!</h1>
+        <p>Estás a un paso de escuchar el nuevo tema promocional antes de su lanzamiento en Spotify.</p>
+        
+        <!-- Tu link real de destino va en las comillas del href -->
+        <a href="TU_LINK_DE_SPOTIFY_O_YOUTUBE" class="boton">Escuchar Ahora</a>
+
+        <!-- Zona para colocar los anuncios de Adsterra -->
+        <div class="anuncio-espacio">
+            <p style="color:#555;">[Espacio Publicitario / Anuncio Recomendado]</p>
+        </div>
+    </div>
+</body>
+</html>
